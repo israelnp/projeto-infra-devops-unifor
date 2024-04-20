@@ -8,11 +8,6 @@ variable "secret_key" {
   description = ""
 }
 
-variable "aws_profile" {
-  type        = string
-  description = ""
-  default     = "default"
-}
 
 variable "aws_region" {
   type        = string
