@@ -1,3 +1,19 @@
+variable "access_key" {
+  type        = string
+  description = ""
+}
+
+variable "secret_key" {
+  type        = string
+  description = ""
+}
+
+variable "aws_profile" {
+  type        = string
+  description = ""
+  default     = "default"
+}
+
 variable "aws_region" {
   type        = string
   description = ""
