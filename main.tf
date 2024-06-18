@@ -59,7 +59,7 @@ module "monitorServer" {
 
 
 module "securityServer" {
-  source        = "./monitor-server"
+  source        = "./security-server"
   image_id      = var.image_id
   instance_type = var.security_instance_type
   aws_subnet_id = module.network.private_az_a_subnet_id

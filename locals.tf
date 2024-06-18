@@ -1,7 +1,7 @@
 locals {
   common_tags = {
-    Project   = "Trabalho Fundamentos do DevOps"
-    CreatedAt = "2024-14-06"
+    Project   = "Trabalho Da Diciplina de SOC"
+    CreatedAt = "2024-18-06"
     ManagedBy = "Terraform"
     Service   = "APP GO"
   }
