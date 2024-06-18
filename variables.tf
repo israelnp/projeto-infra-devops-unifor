@@ -46,7 +46,7 @@ variable "service_name" {
 variable "instance_type" {
   type        = string
   description = ""
-  default     = "t3.micro"
+  default     = "t3.large"
 }
 
 variable "security_instance_type" {
