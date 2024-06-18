@@ -58,4 +58,16 @@ module "monitorServer" {
 }
 
 
+module "securityServer" {
+  source        = "./monitor-server"
+  image_id      = var.image_id
+  instance_type = var.security_instance_type
+  aws_subnet_id = module.network.private_az_a_subnet_id
+  key_name      = var.instance_key_name
+  vpc_id        = module.network.vpc_id
+  common_tags   = local.common_tags
+  target-ip     = module.appServer.app-ip
+}
+
+
 
