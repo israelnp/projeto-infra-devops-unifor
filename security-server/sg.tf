@@ -31,5 +31,5 @@ resource "aws_security_group" "this" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  tags = merge(var.common_tags, { Name = "Monitor Machine" })
+  tags = merge(var.common_tags, { Name = "Security Machine" })
 }
