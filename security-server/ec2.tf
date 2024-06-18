@@ -10,7 +10,11 @@ resource "aws_instance" "this" {
   monitoring                  = true
   subnet_id                   = var.aws_subnet_id
   associate_public_ip_address = false
-  volume_size                 = 100
-  volume_type                 = "gp2"
-  tags                        = merge(var.common_tags, { Name = "Security Machine" })
+  root_block_device {
+    volume_size = 100
+    volume_type = "gp3"
+    encrypted   = true
+    kms_key_id  = data.aws_kms_key.customer_master_key.arn
+  }
+  tags = merge(var.common_tags, { Name = "Security Machine" })
 }
