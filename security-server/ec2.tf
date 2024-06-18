@@ -13,8 +13,6 @@ resource "aws_instance" "this" {
   root_block_device {
     volume_size = 100
     volume_type = "gp3"
-    encrypted   = true
-    kms_key_id  = data.aws_kms_key.customer_master_key.arn
   }
   tags = merge(var.common_tags, { Name = "Security Machine" })
 }
